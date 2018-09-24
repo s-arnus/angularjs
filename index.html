@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myFirstApp" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Testing</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Title of the page</title>
 </head>
-<body>
-    <h1>Hello</h1>
+<body ng-controller="myFirstController">
+    <!-- Section that contains some tests-->
+    <h1>Some tests</h1>
+    <div>
+        In app.js:      $scope.email = "test@gmail.com";<br>
+        with \{\{email\}\} in index.html returns:<br>
+        {{email}} <br><br>
+
+        {{function1()}} <br>
+        <input type="text" ng-model="firstname">
+        <input type="text" ng-model="surname">
+        <br>
+    </div>
 </body>
 </html>
