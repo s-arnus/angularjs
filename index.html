@@ -7,9 +7,9 @@
     <title>Title of the page</title>
 </head>
 <body ng-controller="myFirstController">
-    <!-- Section that contains some tests-->
-    <h1>Some tests</h1>
     <div>
+        <!-- Section that contains some tests-->
+        <h1>Some tests</h1>
         {{function1()}} <br>
         Enter firstname:
         <input type="text" ng-model="firstname"><br>
@@ -17,15 +17,25 @@
         <input type="text" ng-model="surname"><br>
         Firstname = {{firstname}}<br>
         Surname = {{surname}}<br>
-        <br><br>
     </div>
     <div>
-        <H2>Name Calculator</H2>
+        <!-- Name Calculator-->
+        <H1>Name Calculator</H1>
         Input name: 
         <input type="text" 
             ng-model="name"
             ng-keyup="displayNumberic();"><br>
         Total numeric value of the name: {{totalvalue}}<br>
+    </div>
+    <div>
+        <!-- Dependency Injection
+            //ng-blur - when text box loses focus
+        -->
+        <H1>Dependency Injection</H1>
+        <input type="text" 
+            ng-model="name2"
+            ng-blur="upper();"><br>
+        {{name2}}
     </div>
 </body>
 </html>

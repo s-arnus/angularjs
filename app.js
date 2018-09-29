@@ -3,7 +3,7 @@
 'use strict';
 
 var myFirstApp = angular.module('myFirstApp', [])
-    myFirstApp.controller('myFirstController', function ($scope) {
+    myFirstApp.controller('myFirstController', function ($scope, $filter) {
         //Used for some tests
         $scope.firstname = "Juhan";
         $scope.surname = "";
@@ -29,6 +29,12 @@ var myFirstApp = angular.module('myFirstApp', [])
             return totalStringValue;
         };
 
+        //Dependency Injection
+        $scope.name2 = "";
+        $scope.upper = function () {
+            var upcase = $filter('uppercase');
+            $scope.name2 = upcase($scope.name2);
+        };
     });
 
 })();
