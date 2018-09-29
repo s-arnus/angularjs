@@ -10,14 +10,22 @@
     <!-- Section that contains some tests-->
     <h1>Some tests</h1>
     <div>
-        In app.js:      $scope.email = "test@gmail.com";<br>
-        with \{\{email\}\} in index.html returns:<br>
-        {{email}} <br><br>
-
         {{function1()}} <br>
-        <input type="text" ng-model="firstname">
-        <input type="text" ng-model="surname">
-        <br>
+        Enter firstname:
+        <input type="text" ng-model="firstname"><br>
+        Enter surname:
+        <input type="text" ng-model="surname"><br>
+        Firstname = {{firstname}}<br>
+        Surname = {{surname}}<br>
+        <br><br>
+    </div>
+    <div>
+        <H2>Name Calculator</H2>
+        Input name: 
+        <input type="text" 
+            ng-model="name"
+            ng-keyup="displayNumberic();"><br>
+        Total numeric value of the name: {{totalvalue}}<br>
     </div>
 </body>
 </html>
